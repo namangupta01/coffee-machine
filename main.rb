@@ -2,7 +2,6 @@
 
 require './coffee_machine'
 require './test_cases'
-require 'byebug'
 
 # Method to execute and check if coffee machine is behaving as expected or not
 def execute_test_case test_case
@@ -41,8 +40,8 @@ def execute_test_case test_case
 
   # Checking here, if actual output is matching the expected output or not
   output_matched = false
-  expected_outputs.each do |o|
-    if (o - coffee_machine_actual_output).count == 0
+  expected_outputs.each do |output|
+    if (output - coffee_machine_actual_output).count == 0
       output_matched = true
       break
     end
